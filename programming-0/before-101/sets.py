@@ -50,17 +50,15 @@ print(diff(set3, set4))
 
 def cartesian_product(a, b):
 
-    a = tuple(a)
-    b = tuple(b)
     result = []
 
-    for numb1 in a:
-        for numb2 in b:
+    for numb1 in setify(a):
+        for numb2 in setify(b):
             result += [(numb1, numb2)]
 
     return result
 
-set5 = [0, 1, 3]
+set5 = [0, 1, 3, 3]
 set6 = [1, 2]
 
 print(cartesian_product(set5, set6))
