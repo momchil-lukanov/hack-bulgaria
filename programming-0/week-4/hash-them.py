@@ -4,7 +4,7 @@ def hash_them(keys, values):
     index = 0
 
     for key in keys:
-        if index >= 0 and index < len(values):
+        if index < len(values):
             result[key] = values[index]
         else:
             result[key] = None
