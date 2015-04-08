@@ -1,45 +1,29 @@
-def sublist(list1, list2):
+def tail(items):
+    result = []
 
-    index = 0
+    for index in range(1, len(items)):
+        item = items[index]
+        result += [item]
 
-    if list1 == [] and list2 == []:
-        return True
+    return result
 
-    if len(list1) == len(list2):
-        for number in range(0, len(list1)):
-            if list1[number] != list2[number]:
-                return False
-        else:
-            return True
 
-    if len(list1) > len(list2):
-        return False
+def take(n, items):
+    result = []
 
-    while index < len(list2):
-        if list1[0] == list2[index]:
-            a = index
-            x = index
-            for number in range(0, len(list1)):
-                if list1[number] == list2[a]:
-                    a += 1
-            if a - x == len(list1):
-                return True
-        index += 1
+    for index in range(0, min(n, len(items))):
+        result += [items[index]]
 
-    return False
+    return result
 
-y = sublist(["Python"], ["Python", "Django"])
-print(y)
 
-z = sublist([1, 2], [1, 0, 1, 2, 2])
-print(z)
+def sublist(l1, l2):
+  n = len(l1)
 
-t = sublist([], [])
-print(t)
+  while len(l2) != 0:
+    if take(n, l2) == l1:
+      return True
+    
+    l2 = tail(l2)
 
-b = sublist(["Django", "Python"], ["Python", "Django"])
-print(b)
-
-i = sublist(["Django", "Python", "Bango"], ["Python", "Django"])
-print(i)
-
+  return False
