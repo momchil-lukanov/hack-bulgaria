@@ -1,0 +1,11 @@
+package com.hackbulgaria.programming51.week2;
+
+public class CoffeeMachine {
+	public Coffee[] kinds;
+	public double balance;
+	
+	public CoffeMachine() {
+		kinds = new Coffee[10];
+	}
+
+}

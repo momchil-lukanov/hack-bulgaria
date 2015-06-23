@@ -1,0 +1,9 @@
+package com.hackbulgaria.programming51.week2;
+
+public class PersonMain {
+
+	public void main(String[] args) {
+		Person momchil = new Person("Momchil", "Lukanov", 25);
+		System.out.println(momchil);
+	}
+}

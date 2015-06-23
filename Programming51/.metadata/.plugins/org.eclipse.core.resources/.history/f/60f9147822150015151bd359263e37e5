@@ -1,0 +1,12 @@
+package com.hackbulgaria.programming51.week2;
+
+public class CoffeeMachine {
+	private Coffee[] kinds;
+	private double balance;
+	private machineCapacity = 10;
+	
+	public CoffeMachine() {
+		kinds = new Coffee[machineCapacity];
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.hackbulgaria.programming51.week2;
+
+public class Coffee {
+	
+	public String brand = "";
+	public float price = 0;
+	
+	public Coffee(String brand1, float price1) {
+		brand = brand1;
+		price = price1;
+	}
+	
+	public String toString() {
+		return brand + ": " + price;
+	}
+	
+
+	public static void main(String[] args) {
+		Coffee lavazza = new Coffee("Lavazza", 1.00f);
+		System.out.println(lavazza);
+	}
+
+}
