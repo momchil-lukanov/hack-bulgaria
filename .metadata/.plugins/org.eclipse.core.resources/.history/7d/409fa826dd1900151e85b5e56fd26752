@@ -76,16 +76,14 @@ public class Fridge {
 				result[counter] = food.toString();
 			}
 		}
-		String[] result2 = new String[counter];
-		int counter2 = 0;
-		for (int i = 0; i < result.length; i++) {
-			if (foods[i] != null && foods[i].type == type) {
-				result2[counter2] = foods[i].toString();
-				counter2++;
+		result = new String[counter];
+		for (Food food : foods) {
+			if (food != null && food.type == type) {
+				counter++;
+				result[counter] = food.toString();
 			}
-		}
 		
-		return result2;
+		return result;
 	}
 
 	public String toString() {

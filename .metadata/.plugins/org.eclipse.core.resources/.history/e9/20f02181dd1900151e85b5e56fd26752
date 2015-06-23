@@ -85,7 +85,7 @@ public class Fridge {
 			}
 		}
 		
-		return result2;
+		return result;
 	}
 
 	public String toString() {
