@@ -4,7 +4,7 @@ public class AutoMain {
 
 	public static void main(String[] args) {
 		Person ivan = new Person();
-		ivan.firstName = "Ivan";
+		ivan.name = "Ivan";
 		ivan.lastName = "Ivanov";
 		ivan.age = 25;
 
