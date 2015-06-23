@@ -1,0 +1,6 @@
+package com.hackbulgaria.programming51.week2;
+
+public class CoffeeMachine {
+	Coffee[] brandsOfCoffee;
+	float balance = 0f;
+}

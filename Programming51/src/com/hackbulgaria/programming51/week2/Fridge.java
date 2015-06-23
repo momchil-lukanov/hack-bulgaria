@@ -5,40 +5,40 @@ public class Fridge {
 	public int capacity = 0;
 	public int weight = 0;
 	public int foodCounter = 0;
-	
-	public Fridge(int capacity){
+
+	public Fridge(int capacity) {
 		this.capacity = capacity;
 		this.weight = weight;
 		this.foods = new Food[capacity];
 	}
-	
-	public Fridge(int capacity, int weight){
+
+	public Fridge(int capacity, int weight) {
 		this.capacity = capacity;
 		this.weight = weight;
 		this.foods = new Food[capacity];
 	}
-	
-	public int getCapacity(){
+
+	public int getCapacity() {
 		return capacity;
 	}
-	
-	public int getMaxWeight(){
+
+	public int getMaxWeight() {
 		return weight;
 	}
-	
-	public Food getHaviestFood(){
+
+	public Food getHaviestFood() {
 		Food result = null;
 		int maxWeight = 0;
-		for (Food food: foods){
-			if (food != null && food.weight > maxWeight){
+		for (Food food : foods) {
+			if (food != null && food.weight > maxWeight) {
 				maxWeight = food.weight;
 				result = food;
 			}
 		}
 		return result;
 	}
-	
-	public boolean addFood(Food f){
+
+	public boolean addFood(Food f) {
 		if (foodCounter < capacity) {
 			foods[foodCounter] = f;
 			foodCounter += 1;
@@ -46,41 +46,42 @@ public class Fridge {
 		}
 		return false;
 	}
-	
-	public int getFoodsCount(){
+
+	public int getFoodsCount() {
 		int result = 0;
-		for (Food food: foods){
-			if (food != null){
+		for (Food food : foods) {
+			if (food != null) {
 				result += 1;
 			}
 		}
 		return result;
 	}
-	
-	public int getWeight(){
+
+	public int getWeight() {
 		int result = 0;
-		for (Food food: foods){
-			if (food != null){
+		for (Food food : foods) {
+			if (food != null) {
 				result += food.weight;
 			}
 		}
 		return result;
 	}
-	
-	public String [] getProductsOfType(String type){
+
+	public String[] getProductsOfType(String type) {
 		String[] result = new String[capacity];
 		int counter = 0;
-		for(Food food: foods){
-			if (food != null && food.type == type){
+		for (Food food : foods) {
+			if (food != null && food.type == type) {
 				counter++;
 				result[counter] = food.toString();
 			}
+		}
+		return result;
 	}
-		return result;}
-	
-	public String toString(){
+
+	public String toString() {
 		String result = "";
-		for (Food food: foods) {
+		for (Food food : foods) {
 			if (food != null) {
 				result += food + "\n";
 			}

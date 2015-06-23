@@ -1,0 +1,17 @@
+package com.hackbulgaria.programming51.week2;
+
+public class CoffeeMachine {
+	int capacity = 10;
+	Coffee[] brandsOfCoffee = new Coffee[capacity];
+	double balance = 0;
+	int coffeeCounter = 0;
+	
+	public boolean addCoffee(Coffee coffee){
+		if (coffeeCounter < capacity) {
+			coffeeCounter++;
+			return true;
+			}
+		}
+		return false;
+	}
+}

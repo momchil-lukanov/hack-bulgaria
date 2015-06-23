@@ -1,28 +1,43 @@
 package com.hackbulgaria.programming51.week2;
 
 public class CoffeeMachine {
-	private Coffee[] kinds;
-	private double balance;
-	private machineCapacity = 10;
-	private int currendKindsIndex = 0;
+	int capacity = 10;
+	Coffee[] brandsOfCoffee = new Coffee[capacity];
+	double balance = 0;
+	int coffeeCounter = 0;
 	
-	public CoffeMachine() {
-		kinds = new Coffee[machineCapacity];
-	}
-	
-	private boolean hasKind(Coffee kind){
-		for (int i =0;i<kinds.length; i+=1){
-			if(kinds[i].brand.equals)
+	public String toString(){
+		String result = "";
+		for (Coffee Coffee: brandsOfCoffee){
+			if (Coffee != null){
+				result += Coffee.brand + " " + Coffee.price + "\n";
+			}
 		}
+		return result;
 	}
 	
-	public void addCoffee(){
-		if(hasKind(kind){
-			
+	public boolean addCoffee(Coffee coffee){
+		if (coffeeCounter < capacity) {
+			brandsOfCoffee[coffeeCounter] = coffee;
+			coffeeCounter++;
+			return true;
+			}
+		return false;
+	}
+	
+	public double buyCoffee(String brand, double d){
+		double change = 0;
+		for (int i = 0; i < brandsOfCoffee.length; i++) {
+			if (brandsOfCoffee[i].brand.equals(brand)) {
+				if (d >= brandsOfCoffee[i].price) {
+					change = d - brandsOfCoffee[i].price;
+					balance += brandsOfCoffee[i].price;
+					return change;
+				} else {
+					return d;
+				}
+			}
 		}
-		System.out.println(kinds.length);
+		return -1;
 	}
-	
-	currentKindsIndex += 1;
-	kinds[currentKindsIndex] = kind;
 }
