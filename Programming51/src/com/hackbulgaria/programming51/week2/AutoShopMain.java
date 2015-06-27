@@ -3,7 +3,7 @@ package com.hackbulgaria.programming51.week2;
 public class AutoShopMain {
 
 	public static void main(String[] args) {
-		
+
 		Person ivan = new Person();
 		ivan.name = "Ivan";
 		ivan.age = 25;
@@ -31,8 +31,12 @@ public class AutoShopMain {
 		AutoShop as = new AutoShop();
 		as.addCar(audi);
 		as.addCar(peugeot);
-
+		
+		System.out.println(as.toString());
+		
 		System.out.println(as.getTopSpeed());
+
+
 
 	}
 

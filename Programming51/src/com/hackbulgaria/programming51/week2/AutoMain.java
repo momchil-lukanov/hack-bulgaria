@@ -1,5 +1,7 @@
 package com.hackbulgaria.programming51.week2;
 
+import com.hackbulgaria.programming51.week2.Auto;
+
 public class AutoMain {
 
 	public static void main(String[] args) {

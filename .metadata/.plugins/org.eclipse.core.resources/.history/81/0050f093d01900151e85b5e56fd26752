@@ -1,7 +1,0 @@
-package com.hackbulgaria.programming51.week2;
-
-public class CoffeeMachine {
-	Coffee[] brandsOfCoffee;
-	int capacity = 0;
-	float balance = 0f;
-}

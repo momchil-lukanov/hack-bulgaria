@@ -1,0 +1,41 @@
+package com.hackbulgaria.programming51.week2;
+
+public class Fraction {
+
+	int num = 0;
+	int den = 0;
+
+	public Fraction() {
+		this.num = num;
+		this.den = den;
+	}
+
+	public String toString() {
+		String result = num + "/" + den;
+		return result;
+	}
+
+	public double getReal() {
+		double result = 0;
+		return result = (double) num / (double) den;
+	}
+
+	public int commonDenominator(Fraction F) {
+		int result = 0;
+		if (this.den > F.den) {
+			return result = this.den / F.den;
+		} else {
+			return result = F.den / this.den;
+		}
+	}
+
+	public void sum(Fraction F) {
+		if (this.den > F.den) {
+			F.den = F.den*commonDenominator(F);
+		}
+		if (this.den < F.den) {
+			this.den = this.den*commonDenominator(F)
+		}
+	}
+
+}

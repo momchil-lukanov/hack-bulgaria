@@ -17,6 +17,6 @@ public class Person {
 	
 	public String toString(){
 		
-		return name + " " + lastName + " " + "age: " + age;
+		return name + " " + lastName + "(" + age + ")";
 	}
 }

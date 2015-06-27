@@ -1,5 +1,6 @@
 package com.hackbulgaria.programming51.week2;
 
+
 public class Auto {
 
 	public Person owner;
@@ -10,8 +11,6 @@ public class Auto {
 
 	public Auto() {
 	}
-	
-	Person ivan = new Person("Ivan", "Ivanonv", 25);
 
 	public Auto(Person owner, int maxSpeed, String brand, String name, int price) {
 		this.owner = owner;

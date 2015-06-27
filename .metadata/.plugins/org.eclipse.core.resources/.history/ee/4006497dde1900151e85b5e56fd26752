@@ -1,9 +1,0 @@
-package com.hackbulgaria.programming51.week2;
-
-public class AutoShop {
-	Auto[] autos = new Auto[]
-	
-	public void addCar(Auto){
-		
-	}
-}
