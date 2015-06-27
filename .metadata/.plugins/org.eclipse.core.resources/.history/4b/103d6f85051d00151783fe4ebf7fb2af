@@ -4,9 +4,9 @@ public class IntegerVectorStatic {
 
 	public static String toString(IntegerVector v) {
 		String result = "";
-		for (int i = 0; i < v.data.length; i++) {
+		for (int i = 0; i < v.size(); i++) {
 			result += v.data[i];
-			if (i != v.data.length - 1) {
+			if (i != v.size() - 1) {
 				result += ",";
 			}
 		}
@@ -69,6 +69,7 @@ public class IntegerVectorStatic {
 
 	public static IntegerVector filterOdd(IntegerVector v) {
 		int newCapacity = 0;
+		int newSize = 0;
 		IntegerVector result = new IntegerVector();
 		int index = 0;
 
@@ -79,7 +80,7 @@ public class IntegerVectorStatic {
 		}
 
 		result.data = new int[newCapacity];
-		
+
 		for (int j = 0; j < v.data.length; j++) {
 			if (v.data[j] % 2 != 0) {
 				result.data[index] = v.data[j];
@@ -91,9 +92,11 @@ public class IntegerVectorStatic {
 	}
 
 	public static void main(String[] args) {
-		  IntegerVector v = new IntegerVector();
-		  v = IntegerVectorStatic.range(10,20);
-		  System.out.println(IntegerVectorStatic.toString(v));
+		int[] a = { 2, 3, 4, 8, 9, 11, 13, 15 };
+		IntegerVector v = new IntegerVector();
+		v.addAll(a);
+		IntegerVector temp = IntegerVectorStatic.filterOdd(v);
+		System.out.println(IntegerVectorStatic.toString(temp));
 	}
 
 }

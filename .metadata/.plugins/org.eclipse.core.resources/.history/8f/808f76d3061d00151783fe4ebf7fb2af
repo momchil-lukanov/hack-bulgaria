@@ -92,7 +92,7 @@ public class IntegerVectorStatic {
 
 	public static void main(String[] args) {
 		  IntegerVector v = new IntegerVector();
-		  v = IntegerVectorStatic.range(10,20);
+		  v = IntegerStatic.range(10,20);
 		  System.out.println(IntegerVectorStatic.toString(v));
 	}
 
