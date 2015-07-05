@@ -8,11 +8,10 @@ public class Employee {
 	}
 	
 	public String getName(){
-		return name;
+		return this.name;
 	}
 
 	public String toString() {
-		String result = "";
-		return result = name;
+		return this.name;
 	}
 }
