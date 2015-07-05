@@ -12,8 +12,6 @@ public class LilisLibrary {
 		Vector<String> tempString = new Vector<>();
 		Vector<Integer> tempInt = new Vector<>();
 		int counter = 0;
-		
-		Collections.sort(books);
 
 		for (int i = 0; i < books.size(); i++) {
 			if (!tempString.contains(books.get(i))) {
@@ -33,6 +31,22 @@ public class LilisLibrary {
 			Pair<String, Integer> e = new Pair(tempString.get(i),
 					tempInt.get(i));
 			temp.add(e);
+		}
+		return LilisLibrary.sorted(temp);
+	}
+	
+	public static Vector<Pair<String, Integer>> sorted(Vector<Pair<String, Integer>> x){
+		
+		Vector<Pair<String, Integer>> temp = new Vector<>();
+		String alphabet = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+		int counter = 0;
+		for (int i = 0; i < alphabet.length(); i++) {
+			for (int j = 0; j < x.size(); j++) {
+				if (x.get(j).first.charAt(0) == alphabet.charAt(i)) {
+					Pair<String, Integer> e = new Pair(x.get(j).first, x.get(j).second);
+					temp.add(e);
+				}
+			}
 		}
 		return temp;
 	} 
