@@ -1,0 +1,49 @@
+package com.hackbulgaria.programming51.week4;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+public class LilisLibrary {
+	public static Vector<Pair<String, Integer>> orderBooks(Vector<String> books) {
+
+		Vector<Pair<String, Integer>> temp = new Vector<>();
+
+		for (int i = 0; i < books.size(); i++) {
+			String book = books.get(i);
+			Integer howMany = 0;
+			Pair<String, Integer> x = new Pair(book, howMany);
+			if (temp == null) {
+				temp.add(x);
+			} else {
+				for (int j = 0; j < temp.size(); j++) {
+					if (temp.get(j).first.equals(book)) {
+						howMany++;
+						Pair<String, Integer> y = new Pair(book, howMany);
+						temp.set(0, Pair<String, Integer> y);
+					}
+					
+				}
+			}
+			{
+
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		Vector<String> books = new Vector<String>();
+		int booksCount = Integer.parseInt(scanner.nextLine());
+
+		for (int i = 0; i < booksCount; i++) {
+			books.add(scanner.nextLine());
+		}
+
+		Vector<Pair<String, Integer>> result = orderBooks(books);
+
+		for (Pair<String, Integer> titleCount : result) {
+			System.out.println(titleCount.first + " : " + titleCount.second);
+		}
+	}
+}
