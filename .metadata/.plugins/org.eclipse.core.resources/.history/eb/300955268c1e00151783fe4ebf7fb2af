@@ -1,0 +1,15 @@
+package com.hackbulgaria.programming51.week4;
+
+public class MusicOrganiserMain {
+
+	public static void main(String[] args) {
+		MusicOrganiser mo = new MusicOrganiser();
+
+		mo.addSong(new Song("The real Slim Shady", "Eminem", 213,
+				"The Marshall Mathers LP"));
+
+		System.out.println(mo);
+
+	}
+
+}

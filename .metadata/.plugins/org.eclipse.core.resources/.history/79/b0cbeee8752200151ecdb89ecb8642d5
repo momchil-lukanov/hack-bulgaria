@@ -1,0 +1,15 @@
+package com.hackbulgaria.programming51.week3;
+
+public class TravelExpenseMain {
+
+	public static void main(String[] args) {
+
+
+		conf.addExpense(dinner);
+
+		System.out.println(conf.totalNetCost() == 100); // true
+		System.out.println(conf.totalCost() == 120); // VAT Included -> true
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.hackbulgaria.programming51.week4;
+
+public class Song {
+	private String name = "";
+	private String artist = "";
+	private int duration = 0;
+	private String album = "";
+	
+	public Song
+
+}

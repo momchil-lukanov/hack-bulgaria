@@ -1,0 +1,32 @@
+package com.hackbulgaria.programming51.week4;
+
+public class MusicOrganiser<Song> {
+
+	private Song[] songs;
+	private int capacity = 10;
+	rivate int size = 0;
+
+	public MusicOrganiser() {
+		songs = (Song[]) new Object[capacity];
+	}
+
+		public void addSong(Song x) {
+			if (size == capacity) {
+				resize();
+			}
+			songs[size] = x;
+			size++;
+		}
+
+		public void resize() {
+			capacity = capacity * 2 + 1;
+			Song[] temp = (Song[]) new Object[capacity];
+			for (int i = 0; i < size; i++) {
+				temp[i] = songs[i];
+			}
+			songs = temp;
+		}
+
+	}
+
+}

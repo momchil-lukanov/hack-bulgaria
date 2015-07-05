@@ -1,0 +1,21 @@
+package com.hackbulgaria.programming51.week3;
+
+public class Travel {
+	public String country = "";
+	public String city = "";
+	public int vat;
+
+	public Travel(String country, String city, int vat) {
+	this.country = country;
+	this.city = city;
+	this.vat = vat;
+	}
+	
+	public String getCity(){
+		return city;
+	}
+	
+	public country getCountry(){
+		return country;
+	}
+}

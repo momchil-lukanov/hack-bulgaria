@@ -1,0 +1,8 @@
+package com.hackbulgaria.programming51.week4;
+
+public class Song {
+	private name;
+	private artist = "";
+	
+
+}

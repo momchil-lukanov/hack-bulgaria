@@ -1,0 +1,9 @@
+package com.hackbulgaria.programming51.week4;
+
+public class MusicOrganiser {
+	
+	public class Vector<song>{
+		
+	}
+
+}

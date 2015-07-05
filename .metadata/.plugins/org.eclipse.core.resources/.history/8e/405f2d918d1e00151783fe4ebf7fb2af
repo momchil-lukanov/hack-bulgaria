@@ -1,0 +1,17 @@
+package com.hackbulgaria.programming51.week4;
+
+public class MusicOrganiserMain {
+
+	public static void main(String[] args) {
+		MusicOrganiser mo = new MusicOrganiser();
+
+		mo.addSong(new Song("The real Slim Shady", "Eminem", 213, "The Marshall Mathers LP"));
+		mo.addSong(new Song("The Way I Am", "Eminem", 183, "The Marshall Mathers LP"));
+		mo.addSong(new Song("When I'm Gone", "Eminem", 256, "Curtain Call: The Hits"));
+		mo.addSong(new Song("Lose Yourself", "Eminem", 221, "Curtain Call: The Hits"));
+
+		System.out.println(mo.getCount());
+
+	}
+
+}

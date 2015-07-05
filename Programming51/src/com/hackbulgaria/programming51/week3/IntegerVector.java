@@ -44,22 +44,42 @@ public class IntegerVector {
 	public int size() {
 		return size;
 	}
-	
-	public int sum(){
+
+	public int sum() {
 		int result = 0;
 		for (int i = 0; i < size; i++) {
 			result += data[i];
 		}
 		return result;
 	}
-	
-	public void addAll(int [] n) {
+
+	public void addAll(int[] n) {
 		for (int i = 0; i < n.length; i++) {
 			add(n[i]);
 		}
 	}
-	
-	public int get(int index){
+
+	public int get(int index) {
 		return data[index];
+	}
+
+	public void set(int index, int sth) {
+		data[index] = sth;
+	}
+
+	public void insert(int index, int data1) {
+		add(data1);
+		for (int i = data.length - 1; i > index; i--) {
+			int temp = data[i - 1];
+			data[i - 1] = data[i];
+			data[i] = temp;
+		}
+	}
+
+	public void remove(int index) {
+		for (int i = index; i < data.length - 1; i++) {
+			data[i] = data[i + 1];
+		}
+		size = size - 1;
 	}
 }

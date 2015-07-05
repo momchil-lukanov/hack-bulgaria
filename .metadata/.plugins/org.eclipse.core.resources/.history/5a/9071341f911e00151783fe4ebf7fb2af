@@ -1,0 +1,43 @@
+package com.hackbulgaria.programming51.week4;
+
+import java.security.acl.LastOwnerException;
+
+public class MusicOrganiser {
+
+	private Vector<Song> songs;
+
+	public MusicOrganiser() {
+		songs = new Vector<Song>();
+	}
+
+	public void addSong(Song x) {
+		songs.add(x);
+	}
+
+	public int getCount() {
+		return songs.size();
+	}
+
+	public Vector<String> getAlbums() {
+		Vector<String> temp = new Vector<String>();
+		Vector<String> albums = new Vector<String>();
+		
+		for (int i = 0; i < songs.size(); i++) {
+			Song song = songs.get(i);
+			if(!albums.contains(song.album)) {
+				albums.add(songs.album);
+			}
+		}
+		return temp;
+
+	}
+
+	public String toString() {
+		String result = "";
+		for (int i = 0; i < songs.size(); i++) {
+			result += songs.get(i) + " ";
+		}
+		return result;
+	}
+
+}

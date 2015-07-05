@@ -1,0 +1,20 @@
+package com.hackbulgaria.programming51.week3;
+
+public class TravelMain {
+
+	public static void main(String[] args) {
+		Travel conf = new Travel("Berlin", "Germany", 20);
+		
+		System.out.println(conf.getCity());
+
+		System.out.println(conf.getCity().equals("Berlin")); // true
+		System.out.println(conf.getCountry().equals("Germany")); // true
+		System.out.println(conf.getVat() == 20); // true, VAT = Value Added Tax = ÄÄÑ
+		
+		conf.addExpense(dinner);
+
+		System.out.println(conf.totalNetCost() == 100); // true
+		System.out.println(conf.totalCost() == 120); // VAT Included -> true
+	}
+
+}

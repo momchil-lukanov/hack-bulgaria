@@ -1,0 +1,30 @@
+package com.hackbulgaria.programming51.week4;
+
+public class MusicOrganiser {
+
+	public class Vector<Song> {
+	private Song[] songs;
+	private int capacity = 10;
+	private int size = 0;
+
+	public Vector() {
+		songs = (Song[]) new Object[capacity];
+	}
+
+	public void resize() {
+		capacity = capacity * 2 + 1;
+		Song[] temp = (Song[]) new Object[capacity];
+		for (int i = 0; i < size; i++) {
+			temp[i] = songs[i];
+		}
+		songs = temp;
+	}
+
+	}
+
+	public void addSong(Song song) {
+		songs[Song.size] = s;
+		size++;
+	}
+
+}

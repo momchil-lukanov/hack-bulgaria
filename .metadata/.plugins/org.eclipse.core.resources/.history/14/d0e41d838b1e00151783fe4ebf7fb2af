@@ -1,0 +1,25 @@
+package com.hackbulgaria.programming51.week4;
+
+import java.security.acl.LastOwnerException;
+
+public class MusicOrganiser {
+
+	private Vector<Song> songs;
+
+	public MusicOrganiser() {
+		songs = new Vector<Song>();
+	}
+
+	public void addSong(Song x) {
+		songs.add(x);
+	}
+
+	public String toString() {
+		String result = "";
+		for (int i = 0; i < lastIndexOf(Vector songs); i++) {
+			result += songs.get(i) + " ";
+		}
+		return result;
+	}
+
+}
