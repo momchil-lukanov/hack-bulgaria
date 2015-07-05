@@ -10,9 +10,11 @@ public class StringNormalizer {
         String[] rawWords = str.split(" ");
         String result = "";
         
+        Vector<String> words = new Vector<String>();
         for (String whatever: rawWords) {
 			if(!whatever.equals("")){
-				result += whatever.toUpperCase().charAt(0) + whatever.substring(1, whatever.length()) + " ";
+				words.add(whatever.toUpperCase().charAt(0) );
+				result += whatever + "*";
 			}
 		}
 		return result.substring(0, result.length()-1);

@@ -12,7 +12,7 @@ public class StringNormalizer {
         
         for (String whatever: rawWords) {
 			if(!whatever.equals("")){
-				result += whatever.toUpperCase().charAt(0) + whatever.substring(1, whatever.length()) + " ";
+				result += whatever.toUpperCase().charAt(0) + whatever.substring(1, whatever.length()) + "*";
 			}
 		}
 		return result.substring(0, result.length()-1);

@@ -7,7 +7,7 @@ public class StringNormalizer {
 	
 	public static String normalizeString(String str) {
         str = str.toLowerCase();
-        String[] rawWords = str.split(" ");
+        Vector<String> rawWords = str.split(" ");
         String result = "";
         
         for (String whatever: rawWords) {
