@@ -1,0 +1,14 @@
+package com.hackbulgaria.programming51.week4;
+
+import java.util.Vector;
+
+public class CustomIntegerVector extends Vector<Integer> {
+	@Override
+	public synchronized String toString() {
+		String result = "";
+		for (int i = 0; i < this.size(); i++) {
+			result += this.get(i) + " ";
+		}
+		return result.substring(0, result.length()-1);
+	}
+}
