@@ -49,17 +49,17 @@ public class LilisLibrary {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
-		Vector<String> books = new Vector<String>();
-		int booksCount = Integer.parseInt(scanner.nextLine());
+	    Vector<String> books = new Vector<String>();
+	    int booksCount = Integer.parseInt(scanner.nextLine());
 
-		for (int i = 0; i < booksCount; i++) {
-			books.add(scanner.nextLine());
-		}
+	    for (int i = 0; i < booksCount; i++) {
+	      books.add(scanner.nextLine());
+	    }
 
-		Vector<Pair<String, Integer>> result = orderBooks(books);
+	    Vector<Pair<String, Integer>> result = orderBooks(books);
 
-		for (Pair<String, Integer> titleCount : result) {
-			System.out.println(titleCount.first + " : " + titleCount.second);
+	    for(Pair<String, Integer> titleCount: result) {
+	      System.out.println(titleCount.first + " : " + titleCount.second);
 		}
 	}
 }

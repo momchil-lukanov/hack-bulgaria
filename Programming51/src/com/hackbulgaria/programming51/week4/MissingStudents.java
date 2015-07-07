@@ -1,7 +1,9 @@
 package com.hackbulgaria.programming51.week4;
 
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.Vector;
+import java.util.Collections;
 
 public class MissingStudents {
 
@@ -17,6 +19,7 @@ public class MissingStudents {
 					sth.add(students.get(j));
 				}
 			}
+			Collections.sort(sth);
 			temp.add(sth);
 			sth = new Vector<String>();
 		}
@@ -35,7 +38,7 @@ public class MissingStudents {
 						result += x.get(i).get(j);
 					}
 				}
-				result += "], *";
+				result += "], ";
 			}
 		}
 		return result + "]";
@@ -43,30 +46,30 @@ public class MissingStudents {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		Vector<String> students = new Vector<>();
-		Vector<Vector<String>> presence = new Vector<>();
+	    Vector<String> students = new Vector<>();
+	    Vector<Vector<String>> presence = new Vector<>();
 
-		int studentsCount = Integer.parseInt(scanner.nextLine());
+	    int studentsCount = Integer.parseInt(scanner.nextLine());
 
-		for (int i = 0; i < studentsCount; i++) {
-			String student = scanner.nextLine();
-			students.add(student);
-		}
+	    for (int i = 0; i < studentsCount; i++) {
+	      String student = scanner.nextLine();
+	      students.add(student);
+	    }
 
-		int days = Integer.parseInt(scanner.nextLine());
+	    int days = Integer.parseInt(scanner.nextLine());
 
-		for (int i = 0; i < days; i++) {
-			int studentsForThatDay = Integer.parseInt(scanner.nextLine());
-			Vector<String> presenceForDay = new Vector<>();
-			for (int j = 0; j < studentsForThatDay; j++) {
-				presenceForDay.add(scanner.nextLine());
-			}
+	    for (int i = 0; i < days; i++) {
+	      int studentsForThatDay = Integer.parseInt(scanner.nextLine());
+	      Vector<String> presenceForDay = new Vector<>();
+	      for (int j = 0; j < studentsForThatDay; j++) {
+	        presenceForDay.add(scanner.nextLine());
+	      }
 
-			presence.add(presenceForDay);
-		}
+	      presence.add(presenceForDay);
+	    }
 
-		Vector<Vector<String>> missing = missingStudents(students, presence);
+	    Vector<Vector<String>> missing = missingStudents(students, presence);
 
-		System.out.println(MissingStudents.toString(missing));
+	    System.out.println(missing);
 	}
 }
