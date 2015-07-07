@@ -5,6 +5,11 @@ import java.util.Vector;
 
 public class BirthdayRanges {
 
+	public static class IntPair {
+		public int start;
+		public int end;
+	}
+
 	public static Vector<Integer> birthdaysCount(Vector<Integer> birthdays,
 			Vector<IntPair> ranges) {
 
@@ -30,12 +35,11 @@ public class BirthdayRanges {
 		Scanner scanner = new Scanner(System.in);
 
 		int bdaysCount = scanner.nextInt();
+		int rangesCount = scanner.nextInt();
 
 		for (int i = 0; i < bdaysCount; i++) {
 			birthdays.add(scanner.nextInt());
 		}
-
-		int rangesCount = scanner.nextInt();
 
 		for (int i = 0; i < rangesCount; i++) {
 			IntPair pair = new IntPair();
@@ -46,7 +50,6 @@ public class BirthdayRanges {
 			ranges.add(pair);
 		}
 
-		System.out.println("Result is:");
 		Vector<Integer> result = birthdaysCount(birthdays, ranges);
 
 		for (int count : result) {

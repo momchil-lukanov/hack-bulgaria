@@ -1,0 +1,22 @@
+package com.hackbulgaria.programming51.week4;
+
+public class Anagrams {
+
+	  public static boolean areAnagrams(String a, String b) {
+		  a = a.toLowerCase();
+		  return false;  
+	  }
+
+	  public static void main(String[] args) {
+	    Scanner scanner = new Scanner(System.in);
+
+	    String a = scanner.next();
+	    String b = scanner.next();
+
+	    if (areAnagrams(a, b)) {
+	      System.out.println("ANAGRAMS");
+	    } else {
+	      System.out.println("NOT ANAGRAMS");
+	    }
+	  }
+	}
