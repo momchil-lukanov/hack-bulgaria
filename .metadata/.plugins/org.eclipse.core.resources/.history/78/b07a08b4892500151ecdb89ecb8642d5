@@ -1,0 +1,6 @@
+package com.hackbulgaria.programming51.week5a;
+
+public class Node<T> {
+	public T data;
+	public ? next;
+}

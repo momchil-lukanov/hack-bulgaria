@@ -1,0 +1,17 @@
+package com.hackbulgaria.programming51.week5a;
+
+public class Main {
+
+	public static void main(String[] args) {
+		LinkedList<Integer> l = new LinkedList<>();
+		for (int i = 10; i < 20; i++) {
+			l.addLast(i);
+		}
+		l.insertAfter(2, 5);
+        l.remove(1);
+        l.set(3, 12312312);
+        System.out.println(l);
+
+	}
+
+}

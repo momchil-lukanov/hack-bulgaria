@@ -1,0 +1,44 @@
+package com.hackbulgaria.programming51.week5a;
+
+public class LinkedList<T> {
+	private Node<T> head;
+	private Node<T> tail;
+
+	public LinkedList() {
+		head = null;
+		tail = null;
+	}
+
+	public void addLast(T data) {
+		Node<T> temp = new Node<T>(data);
+		if (head == null) {
+			head = temp;
+		} else {
+			tail.next = temp;
+		}
+		tail = temp;
+	}
+	
+	public T getData(int index){
+		return getElement(index).data;
+	}
+	
+	public Node<T> getElement(int index){
+		
+		int counter = 0;
+		Node<T> temp = head;
+		while (temp != null) {
+			if (counter == index) {
+				break;
+			}
+			temp = temp.next;
+			counter++;
+		}
+		return temp;
+	}
+	
+	public void insertAfter(int index, T data){
+		Node<T> temp = new Node(data);
+		Node<T> 
+	}
+}
