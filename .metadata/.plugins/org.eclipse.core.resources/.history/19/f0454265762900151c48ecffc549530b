@@ -1,0 +1,7 @@
+package com.hackbulgaria.programming51.week6;
+
+public class Tree {
+	Tree t1 = new tree;
+	Tree t2 = new tree;
+	
+}

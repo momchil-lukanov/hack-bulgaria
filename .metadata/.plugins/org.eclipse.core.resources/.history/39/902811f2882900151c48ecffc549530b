@@ -1,0 +1,21 @@
+package com.hackbulgaria.programming51.week6;
+
+public class Landscape implements Tile {
+	
+	ArrayList<Tile> landscape = new ArrayList<>();
+	
+	@Override
+	public String render() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public void addTile(Tile T){
+		landscape += T;
+	}
+	
+	public String renderAll(){
+		
+	}
+
+}

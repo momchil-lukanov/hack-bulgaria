@@ -1,0 +1,7 @@
+package com.hackbulgaria.programming51.week6;
+
+public class Forest implements Tile {
+	public String render(){
+		return "!!";
+	}
+}

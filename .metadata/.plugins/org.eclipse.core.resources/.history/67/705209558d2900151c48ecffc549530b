@@ -1,0 +1,25 @@
+package com.hackbulgaria.programming51.week6;
+
+public class Axe implements Weapon {
+	private int durability = 0;
+	private int damage = 0;
+
+	@Override
+	public int getDamage() {
+		// TODO Auto-generated method stub
+		return damage;
+	}
+
+	@Override
+	public int getDurability() {
+		// TODO Auto-generated method stub
+		return durability;
+	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
