@@ -1,5 +1,7 @@
 package com.hackbulgaria.programming51.week5a;
 
+import java.lang.reflect.Array;
+
 public class LinkedList<T> {
 	private Node<T> head;
 	private Node<T> tail;
@@ -38,11 +40,11 @@ public class LinkedList<T> {
 	public T getData(int index) {
 		return getElement(index).data;
 	}
-	
-	public int getElementIndex(T data){
+
+	public int getElementIndex(T data) {
 		Node<T> temp = head;
 		int index = 0;
-		while (temp != null){
+		while (temp != null) {
 			if (temp.data == data) {
 				break;
 			}
@@ -85,6 +87,15 @@ public class LinkedList<T> {
 		temp.next = el.next;
 		el.next = temp;
 	}
+	
+	public void insertBefore(int index, T data) {
+		if (index == 0) {
+			addFirst(data);
+		} else {
+			insertAfter(index-1, data);
+		}
+	}
+	
 
 	public void remove(int index) {
 
@@ -122,5 +133,33 @@ public class LinkedList<T> {
 
 	public void set(int index, T el) {
 		getElement(index).data = el;
+	}
+
+	public T[] toArray() {
+
+		T[] result = (T[]) new Array[size()];
+		for (int i = 0; i < result.length; i++) {
+			result[i] = getData(i);
+		}
+		return result;
+
+	}
+
+	public void addArray(T[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			addLast(arr[i]);
+		}
+	}
+
+	public void insertListAfter(int index, LinkedList l) {
+		for (int i = l.size() - 1; i >= 0; i--) {
+			insertAfter(index, (T) l.getData(i));
+		}
+	}
+
+	public void insertListBefore(int index, LinkedList<T> l) {
+		for (int i = l.size() - 1; i >= 0; i--) {
+			insertBefore(index, l.getData(i));
+		}
 	}
 }
