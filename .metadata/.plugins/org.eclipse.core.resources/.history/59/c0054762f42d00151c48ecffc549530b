@@ -1,0 +1,9 @@
+package com.hackbulgaria.programming51.week5a;
+
+public class Word {
+	
+	public int canBeFound(char [][] map, String word){
+		
+	}
+	
+}

@@ -1,6 +1,0 @@
-package com.hackbulgaria.programming51.week5;
-
-public class LinkedList {
-	private Node<T> head;
-	private Node<T> tail;
-}

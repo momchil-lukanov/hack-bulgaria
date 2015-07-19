@@ -1,7 +1,0 @@
-package com.hackbulgaria.programming51.week5;
-
-public class Node {
-	
-	public data;
-	public next;
-}

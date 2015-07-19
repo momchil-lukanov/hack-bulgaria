@@ -1,9 +1,0 @@
-package com.hackbulgaria.programming51.week4;
-
-public class MissingStudents {
-
-	public static Vector<Vector<String>> missingStudents(
-			Vector<String> students, Vector<Vector<String>> presence) {
-		// implementation
-	}
-}

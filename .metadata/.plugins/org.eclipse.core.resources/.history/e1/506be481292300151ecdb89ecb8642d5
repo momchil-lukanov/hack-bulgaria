@@ -1,9 +1,0 @@
-package com.hackbulgaria.programming51.week4;
-
-public class LilisLibrary {
-	
-	public static Vector<Pair<String, Integer>> orderBooks(Vector<String> books) {
-	    // implementation
-	  }
-
-}
