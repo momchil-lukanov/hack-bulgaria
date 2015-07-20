@@ -1,0 +1,28 @@
+package com.hackbulgaria.programming51.week6;
+
+public class CasualZombie implements Zombie {
+	
+	private int health;
+	
+
+	public int getTotalHealth() {
+		// TODO Auto-generated method stub
+		return health;
+	}
+
+	public int getCurrentHealth() {
+		// TODO Auto-generated method stub
+		return health;
+	}
+
+	public void hit(int damage) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public boolean isDead() {
+		// TODO Auto-generated method stub
+		return health == 0;
+	}
+
+}

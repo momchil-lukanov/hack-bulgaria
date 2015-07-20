@@ -1,0 +1,13 @@
+package com.hackbulgaria.programming51.week6;
+
+public class AncientSword extends Weapon {
+
+	public AncientSword(int damage, int durability) {
+		super(damage, durability);
+		// TODO Auto-generated constructor stub
+	}
+	private int damage = 50;
+	private int durability = 10;
+	private int maxDurability = 10;
+
+}

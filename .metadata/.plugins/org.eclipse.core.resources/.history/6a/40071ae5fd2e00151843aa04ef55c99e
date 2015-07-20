@@ -1,0 +1,16 @@
+package com.hackbulgaria.programming51.week6;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Weapon w = new Axe();
+		System.out.println(w.getDurability());
+		for (int i = 0; i < 15; i++) {
+			w.hit();
+			System.out.println(w.getDurability());
+			System.out.println(w.getDamage());
+		}
+		System.out.println(w.getType());
+	}
+
+}

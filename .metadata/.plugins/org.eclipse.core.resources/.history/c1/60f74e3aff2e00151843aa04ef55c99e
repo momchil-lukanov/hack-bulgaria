@@ -1,0 +1,11 @@
+package com.hackbulgaria.programming51.week6;
+
+public interface WeaponInterface {
+	
+	public void hit(){
+	}
+	
+	public String getType(){
+		return null;
+	}
+}

@@ -1,0 +1,8 @@
+package com.hackbulgaria.programming51.week6;
+
+public class Axe extends Weapon {
+	private int durability = 50;
+	private int maxDurability = 50;
+	private int damage = 10;
+
+}

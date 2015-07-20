@@ -1,0 +1,31 @@
+package com.hackbulgaria.programming51.week6;
+
+public class Weapon {
+	
+	private int damage;
+	private int durability;
+	private int maxDurability;
+	
+	public int getDamage() {
+		// TODO Auto-generated method stub
+		return damage;
+	}
+
+	public int getDurability() {
+		// TODO Auto-generated method stub
+		return durability;
+	}
+
+	public String getType() {
+		return "TO_SMASH";
+	}
+	
+	public void hit() {
+		if (durability >= 0) {
+			durability--;
+		}
+		if (durability < maxDurability/2 && damage > 1) {
+			damage--;
+		}
+	}
+}

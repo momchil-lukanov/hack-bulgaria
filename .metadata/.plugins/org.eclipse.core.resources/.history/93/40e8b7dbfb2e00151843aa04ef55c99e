@@ -1,0 +1,10 @@
+package com.hackbulgaria.programming51.week6;
+
+public class Revolver extends Weapon {
+
+	public Revolver() {
+		super(damage, durability);
+		// TODO Auto-generated constructor stub
+	}
+
+}

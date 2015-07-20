@@ -72,9 +72,9 @@ public class WordMain {
 				}
 			}
 			itCan--;
-			if (tempResult != "") {
+			if (tempResult != "" && tempResult.length() >= searched.length()) {
 				temp.add(tempResult);
-				temp.add(stringReverse(result));
+				temp.add(stringReverse(tempResult));
 			}
 		}
 		itCan = Math.min(map[0].length, map.length);
@@ -89,9 +89,9 @@ public class WordMain {
 				}
 			}
 			itCan--;
-			if (tempResult != "") {
+			if (tempResult != "" && tempResult.length() >= searched.length()) {
 				temp.add(tempResult);
-				temp.add(stringReverse(result));
+				temp.add(stringReverse(tempResult));
 			}
 		}
 

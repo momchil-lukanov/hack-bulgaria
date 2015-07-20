@@ -1,0 +1,12 @@
+package com.hackbulgaria.programming51.week6;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Weapon w = new Shotgun();
+		System.out.println(w.getDurability());
+		w.hit();
+		System.out.println(w.getDurability());
+	}
+
+}
