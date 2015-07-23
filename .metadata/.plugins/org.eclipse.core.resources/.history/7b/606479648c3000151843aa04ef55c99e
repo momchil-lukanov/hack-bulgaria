@@ -1,0 +1,38 @@
+package com.hackbulgaria.programming51.week7;
+
+public class Queue<T> implements List<T> {
+	
+	public Node<T> head;
+	public Node<T> tail;
+	
+	public Queue(){
+		head = null;
+		tail = null;
+	}
+	
+	public void push(T data) {
+		Node<T> temp = new Node(data);
+		tail.next = temp;
+		tail = temp;
+	}
+
+	public void pop() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public T peek() {
+		return head.data;
+	}
+
+	public boolean empty() {
+		// TODO Auto-generated method stub
+		return head == null;
+	}
+	
+}

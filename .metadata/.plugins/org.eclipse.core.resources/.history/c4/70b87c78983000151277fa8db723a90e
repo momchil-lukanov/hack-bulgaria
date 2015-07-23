@@ -1,0 +1,32 @@
+package com.hackbulgaria.programming51.week7;
+
+import java.util.Stack;
+
+public class StringUtils {
+	
+	public static String reverseStringWithStack(String s) {
+	    
+		Stack<Character> temp = new Stack<>();
+		
+		for (int i = temp.size(); i >= 0; i--) {
+			temp.push(s.charAt(i));
+		}
+		
+		String result = "";
+		
+		while (temp.size() != 0) {
+			result += temp.peek();
+			temp.pop();
+		}
+		
+		return result;
+	  }
+	
+	public static void main(String[] args) {
+		String a = "hello";
+		StringUtils.reverseStringWithStack(a);
+		System.out.println(a);
+
+	}
+
+}

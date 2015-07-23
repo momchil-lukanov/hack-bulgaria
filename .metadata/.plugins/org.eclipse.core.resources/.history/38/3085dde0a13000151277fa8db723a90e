@@ -1,0 +1,23 @@
+package com.hackbulgaria.programming51.week7;
+
+import java.util.Queue;
+
+public class AdBot {
+	
+	public String[] a;
+	public Queue<String> b;
+
+	public AdBot(String[] a){
+		this.a = a;
+	}
+	
+	public void StringInQueue(){
+		for (int i = 0; i < a.length; i++) {
+			b.add(a[i]);
+		}
+	}
+	
+	public void showNextAd(){
+		String temp = b.peek();
+	}
+}

@@ -1,0 +1,24 @@
+package com.hackbulgaria.programming51.week7;
+
+import java.util.Stack;
+
+public class PositivesAndNegatives {
+	
+	public Stack<Integer> reorder(int[] numbers) {
+	    
+		Stack<Integer> temp = new Stack<>();
+		ArrayList<Ingeter> positive;
+		int max = 0;
+		
+		for (int i = 0; i < numbers.length; i++) {
+			for (int j = 0; j < numbers.length; j++) {
+				if (numbers[j] > 0 && numbers[j] > max) {
+					positive.
+				}
+			}
+		}
+		
+		return null;
+	  }
+	
+}

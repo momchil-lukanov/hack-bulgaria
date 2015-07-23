@@ -1,0 +1,7 @@
+package com.hackbulgaria.programming51.week7;
+
+public interface List {
+	public void push(T data);
+	public void pop();
+	public int size();
+}
