@@ -1,0 +1,23 @@
+package com.hackbulgaria.programming51.week6;
+
+public class Labirinth {
+
+	public char[][] a;
+	
+	public Labirinth(char[][] a){
+		this.a = a;
+	}
+	
+	public String toString(Labirinth a){
+		
+		String result = "";
+		
+		for (int i = 0; i < a.length; i++) {
+			
+		}
+		
+		
+		return null;
+		
+	}
+}

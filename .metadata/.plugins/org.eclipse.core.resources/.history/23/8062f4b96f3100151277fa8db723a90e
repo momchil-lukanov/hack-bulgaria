@@ -1,0 +1,23 @@
+package com.hackbulgaria.programming51.week6;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class LabirinthMain {
+
+	public static void main(String[] args) {
+
+		char[][] symbols = { { '#', '#', '#', '#', '#', '#', '#', '#' },
+				{ '#', 'X', '.', '#', '.', '.', '.', '#' },
+				{ '#', '.', '.', '.', '.', '#', '.', '#' },
+				{ '#', '.', '.', '#', '.', '.', '.', '#' },
+				{ '#', '#', '.', '.', '.', '.', '#', '#' },
+				{ '#', '.', '.', '.', '#', '.', '.', '#' },
+				{ '#', '#', '#', '#', '#', '#', '!', '#' } };
+
+		Labirinth sth = new Labirinth(symbols);
+		
+		System.out.println(sth.toString(sth));
+
+	}
+}

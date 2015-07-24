@@ -1,0 +1,17 @@
+package com.hackbulgaria.programming51.week6;
+
+import org.omg.CORBA.SystemException;
+
+public class LabirinthMain {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		};
+		
+		char[][] x;
+		
+
+	}
+
+}

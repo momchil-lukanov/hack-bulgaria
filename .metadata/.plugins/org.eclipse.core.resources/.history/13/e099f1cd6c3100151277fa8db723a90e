@@ -1,0 +1,18 @@
+package com.hackbulgaria.programming51.week6;
+
+import java.util.Scanner;
+
+public class LabirinthMain {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		int x = scanner.nextInt();
+		int y = scanner.nextInt();
+		
+		char[x][y] z;
+		
+
+	}
+
+}
