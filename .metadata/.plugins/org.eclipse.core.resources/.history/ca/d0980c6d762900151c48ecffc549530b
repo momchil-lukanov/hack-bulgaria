@@ -1,7 +1,0 @@
-package com.hackbulgaria.programming51.week6;
-
-public class Tree {
-	Tree t1 = new Tree();
-	Tree t2 = new Tree();
-	
-}

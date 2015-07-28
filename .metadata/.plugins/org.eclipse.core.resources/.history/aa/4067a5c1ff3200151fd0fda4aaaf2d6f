@@ -1,0 +1,39 @@
+package com.hackbulgaria.programming51.week7;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class PriorityQueue<T> {
+	
+	public Queue<Integer> queue = new LinkedList<>();
+	public Queue<Integer> queue2 = new LinkedList<>();
+	int max = 0;
+	
+	public void push(int data) {
+		((LinkedList<Integer>) queue).push(data);
+		while (!queue.isEmpty()) {
+			((LinkedList<Integer>) queue2).push(queue.peek());
+			if (queue.peek() < max) {
+				max = queue.poll();
+			}
+		}
+		queue.push(data);
+		while (!queue2.isEmpty()) {
+			queue.push(queue2.poll());
+		}
+	}
+	
+	public void main(String[] args) {
+        PriorityQueue queue = new PriorityQueue();
+        queue.push(60);
+        queue.push(75);
+        queue.push(85);
+        queue.push(50);
+        queue.push(56);
+
+        System.out.println(queue.poll()); // 85
+        System.out.println(((List<Integer>) queue).pop()); // 75
+        System.out.println(((List<Integer>) queue).pop()); // 60
+    }
+
+}

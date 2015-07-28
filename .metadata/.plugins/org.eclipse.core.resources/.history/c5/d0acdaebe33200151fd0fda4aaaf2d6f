@@ -1,0 +1,69 @@
+package com.hackbulgaria.programming51.week7a;
+
+import java.util.LinkedList;
+import com.hackbulgaria.programming51.week7.Queue;
+
+public class Stack<T> {
+
+	// use only this interface:
+	// public interface Queue<T> {
+	// public T pop(); // removes the head and returns it
+	// public T peek(); // only returns the head without removing it
+	// public boolean isEmpty(); // returns true if empty
+	// public void push(T data); // pushes data into the queue
+	// }
+
+	public Queue<T> firstQueue = new LinkedList<T>();
+
+	public T pop() {
+		return firstQueue.poll();
+	}
+
+	public T peek() {
+		return firstQueue.peek();
+	}
+
+	public boolean isEmpty() {
+		return firstQueue.peek() == null;
+	}
+
+	public String toString() {
+
+		String result = "";
+
+		for (int i = 0; i < firstQueue.size(); i++) {
+			result += ", " + firstQueue.poll();
+		}
+
+		return result;
+
+	}
+	
+	public void push(T data) {
+		Node<T> temp = new Node<>(data);
+		if (isEmpty()) {
+			firstQueue.head = new Node<T>(data);
+			tail = head;
+		} else {
+			tail.next = new Node<>(data);
+			tail = tail.next;
+		}
+	}
+
+	public void push(T data) {
+		Queue<T> secondQueue = new LinkedList<T>();
+		secondQueue.(data);
+		while (!firstQueue.isEmpty()) {
+			secondQueue.push(firstQueue.poll());
+		}
+		secondQueue = firstQueue;
+	}
+
+	public static void main(String[] args) {
+		Stack<Integer> s = new Stack<>();
+		for (int i = 10; i < 20; i++) {
+			s.push(i);
+		}
+		System.out.println(s);
+	}
+}

@@ -1,0 +1,8 @@
+package com.hackbulgaria.programming51.week7a;
+
+public interface Queue {
+	  public T pop(); // removes the head and returns it
+	  public T peek(); // only returns the head without removing it
+	  public boolean isEmpty(); // returns true if empty
+	  public void push(T data); // pushes data into the queue
+	}

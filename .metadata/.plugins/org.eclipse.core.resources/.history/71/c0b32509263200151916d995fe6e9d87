@@ -1,0 +1,5 @@
+package com.hackbulgaria.programming51.week7a;
+
+public interface Queue {
+
+}

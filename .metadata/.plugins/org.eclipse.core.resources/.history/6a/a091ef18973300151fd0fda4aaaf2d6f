@@ -1,0 +1,17 @@
+package com.hackbulgaria.programming51.week7;
+
+public class PriorityQueueMain {
+
+	public static void main(String[] args) {
+		PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
+		queue.push(60);
+		queue.push(75);
+		queue.push(85);
+		queue.push(50);
+		queue.push(56);
+		queue.toString();
+		System.out.println(queue.pop());
+		System.out.println(queue.pop());
+		System.out.println(queue.pop());
+	}
+}

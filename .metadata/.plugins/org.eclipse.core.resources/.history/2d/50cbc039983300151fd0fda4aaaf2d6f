@@ -1,0 +1,25 @@
+package com.hackbulgaria.programming51.week7;
+
+import java.util.LinkedList;
+
+public class PriorityQueue<T> extends Queue<T> {
+	
+	public Queue<Integer> queue = new Queue<>();
+	public Queue<Integer> queue2 = new Queue<>();
+	Integer max = queue.peek();
+	
+	public void push(int data) {
+		queue.push(data);
+		while (!queue.empty()) {
+			int temp = queue.peek();
+			queue2.push(queue.peek());
+			if (queue.peek() < max) {
+				max = queue.pop();
+			}
+		}
+		queue.push(data);
+		while (!queue2.empty()) {
+			queue.push(queue2.pop());
+		}
+	}
+}

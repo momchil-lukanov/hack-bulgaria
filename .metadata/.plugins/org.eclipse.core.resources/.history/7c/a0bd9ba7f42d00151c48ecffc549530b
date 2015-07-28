@@ -1,5 +1,0 @@
-package com.hackbulgaria.programming51.week5a;
-
-public class Array<T> {
-
-}
