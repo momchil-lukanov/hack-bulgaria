@@ -1,0 +1,31 @@
+package com.hackbulgaria.programming51.week7;
+
+import java.util.Scanner;
+
+public class Parser {
+	
+	
+
+	  public static int evaluate(String formula, int x) {
+	    int result = 0;
+		  for (int i = formula.length() - 1; i >= 0; i--) {
+			if (formula.charAt(i) == 'f') {
+				if (formula.charAt(i+1) == '1') {
+					result.f1;
+				}
+			}
+		}
+	    return x;
+	  }
+
+	  public static void main(String[] args) {
+	    Scanner scanner = new Scanner(System.in);
+
+	    String input = scanner.nextLine();
+	    int x = scanner.nextInt();
+
+	    System.out.println(evaluate(input, x));
+
+	  }
+
+	}

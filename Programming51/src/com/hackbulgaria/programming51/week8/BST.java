@@ -1,5 +1,9 @@
 package com.hackbulgaria.programming51.week8;
 
+import java.awt.List;
+import java.util.LinkedList;
+import java.util.prefs.BackingStoreException;
+
 public class BST<T extends Comparable<T>> {
 	private Node<T> root;
 
@@ -82,6 +86,43 @@ public class BST<T extends Comparable<T>> {
 			printLevelRecursive(level-1, root.left);
 			printLevelRecursive(level-2, root.right);
 		}
+	}
+	
+	public void clear(){
+		root = null;
+	}
+	
+	public LinkedList<T> toList(){
+		
+		LinkedList<T> l = new LinkedList();
+		toListRecursive(root, l);
+		
+		return l;
+	}
+	
+	private void toListRecursive(Node<T> root2, LinkedList<T> l) {
+		if (root == null) return;
+		toListRecursive(root.left, l);
+		l.add(root.data);
+		toListRecursive(root.right, l);
+	}
+
+	public void balance(){
+		//Списсък със сортирани елементи
+		clear();
+		balanceRecursive(new LinkedList<T>());
+	}
+	
+	private void balanceRecursive(Node<T> root, List<T> l) {
+		if (l.isEmpty()) return;
+		int size = l.size();
+		int middle = size/2;
+		l.get(size/2);
+		add(l.get(middle));
+		balanceRecursive(root.left, l.subList(0, middle));
+		balanceRecursive(root.right, l.subList(middle+1, size));
+		
+		
 	}
 
 }

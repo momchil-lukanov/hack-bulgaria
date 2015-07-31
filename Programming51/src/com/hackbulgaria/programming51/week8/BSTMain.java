@@ -4,9 +4,12 @@ public class BSTMain {
 
 	public static void main(String[] args) {
 		
+		BST<Integer> tree = new BST<>();
 		
-		
-		tree.add();
+		for (int i = 0; i < 10; i++) {
+			tree.add(i);
+		}
+		System.out.println(tree.toList());
 
 	}
 
