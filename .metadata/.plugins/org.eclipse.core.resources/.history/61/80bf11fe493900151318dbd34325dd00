@@ -1,7 +1,8 @@
 package com.hackbulgaria.programming51.week8;
 
+import java.awt.List;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.prefs.BackingStoreException;
 
 public class BST<T extends Comparable<T>> {
 	private Node<T> root;
@@ -105,46 +106,43 @@ public class BST<T extends Comparable<T>> {
 			printLevelRecursive(level, root.right, counter + 1);
 		}
 	}
-	
+
 	public int getLevel() {
 		return getLevelRecursive(root);
 	}
-	
+
 	private int getLevelRecursive(Node<T> root) {
-		if(root == null) {
+		if (root == null) {
 			return 0;
 		}
 		int left = getLevelRecursive(root.left);
 		int right = getLevelRecursive(root.right);
-		
-		if(left < right) return right + 1;
+
+		if (left < right)
+			return right + 1;
 		return left + 1;
-	} 
-	
+	}
 
-	
-
-	
 	public void clear() {
 		root = null;
 	}
-	
+
 	public int getHeight() {
 		return getHeightRecursive(root);
 	}
-	
+
 	public int getHeightRecursive(Node<T> root) {
-		if(root == null) { 
+		if (root == null) {
 			return 0;
 		}
 		int left = getHeightRecursive(root.left);
 		int right = getHeightRecursive(root.right);
-		if(left < right) {
+		if (left < right) {
 			return right + 1;
 		}
 		return left + 1;
 	}
-	
+
 	public void balance() {
 		LinkedList<T> l = toList();
 		clear();
@@ -158,22 +156,24 @@ public class BST<T extends Comparable<T>> {
 	}
 
 	private void toListRecursive(Node<T> root, LinkedList<T> l) {
-		if(root == null) return;
-		toListRecursive(root.left,l);
+		if (root == null)
+			return;
+		toListRecursive(root.left, l);
 		l.add(root.data);
-		toListRecursive(root.right,l);
+		toListRecursive(root.right, l);
 	}
 
 	private void balanceRecursive(List<T> l) {
-		if(l.isEmpty())return;
+		if (l.isEmpty())
+			return;
 
 		int size = l.size();
-		int middle = size/2;
-		if(size == 1) {
+		int middle = size / 2;
+		if (size == 1) {
 			add(l.get(0));
 			return;
 		}
-		
+
 		add(l.get(middle));
 		balanceRecursive(l.subList(0, middle));
 		balanceRecursive(l.subList(middle + 1, size));
