@@ -1,0 +1,15 @@
+package com.hackbulgaria.programming51.week8;
+
+public abstract class Test {
+	
+	double startSum = 800000;
+	double interest = 1.07;
+	double take = 0.03;
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

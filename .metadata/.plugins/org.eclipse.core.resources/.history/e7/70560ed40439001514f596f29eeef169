@@ -1,0 +1,12 @@
+package com.hackbulgaria.programming51.week8;
+
+public abstract class Test {
+	
+	int startSum = 800000;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

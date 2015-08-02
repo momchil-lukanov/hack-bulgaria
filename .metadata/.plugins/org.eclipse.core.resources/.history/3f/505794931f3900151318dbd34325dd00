@@ -1,0 +1,12 @@
+package com.hackbulgaria.programming51.week7;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+public class FunctionCallsExtended {
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(system.in);
+	}
+}
+

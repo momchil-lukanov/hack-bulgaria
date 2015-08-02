@@ -1,0 +1,45 @@
+package com.hackbulgaria.programming51.week7;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+public class FunctionCallsExtended {
+	
+	public static int evaluate(Vector strings, String function, int x) {
+		
+		int counterOfSpaces = 0;
+		Vector<String> functionNames = null;
+		
+		for (int i = 0; i < strings.size(); i++) {
+			String sth = (String) strings.elementAt(i);
+			for (int j = 0; j < sth.length(); j++) {
+				Character sth2= sth.charAt(j);
+				if (sth2.equals(' ') && counterOfSpaces == 0) {
+					functionNames.addElement(sth.substring(0, j));
+					counterOfSpaces++;
+				}
+			}
+		}
+		return x;
+		
+	}
+
+	public static void main(String[] args) {
+		String x = " x + 1";
+//		Scanner scanner = new Scanner(System.in);
+//
+//		int lines = scanner.nextInt();
+//		Vector<String> strings = new Vector<>(lines);
+//		
+//		for (int i = 0; i < lines; i++) {
+//			String sth = scanner.nextLine();
+//			strings.addElement(sth);
+//			System.out.println(strings);
+//		}
+//		
+//		String fComposition = scanner.nextLine();
+//		int x = scanner.nextInt();
+
+	}
+
+}

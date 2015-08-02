@@ -1,0 +1,7 @@
+package com.hackbulgaria.programming51.week7;
+
+public class Function {
+	private String fName;
+	private String argumentName;
+	private String fBody;
+}

@@ -1,0 +1,17 @@
+package com.hackbulgaria.programming51.week8;
+
+public abstract class Test {
+
+	public static void main(String[] args) {
+		double startSum = 800000;
+		double realInterest = 1.035;
+		double take = 0.97;
+		
+		for (int i = 0; i < 25; i++) {
+			startSum *= realInterest;
+			startSum = take*startSum;
+			System.out.println(startSum);
+		}
+	}
+
+}

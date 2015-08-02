@@ -1,0 +1,18 @@
+package com.hackbulgaria.programming51.week8;
+
+public abstract class Test {
+
+	public static void main(String[] args) {
+		double startSum = 900000;
+		double avgPurposePerYear = 1.07;
+		double realInterestAfterInflation = 1.035;
+		double takeThreeAndLeaveEverythingElse = 0.97;
+		
+		for (int i = 0; i < 25; i++) {
+			startSum *= avgPurposePerYear;
+			startSum = takeThreeAndLeaveEverythingElse*startSum;
+			System.out.println(startSum);
+		}
+	}
+
+}

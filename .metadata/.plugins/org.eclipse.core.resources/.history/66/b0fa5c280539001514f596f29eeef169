@@ -1,0 +1,20 @@
+package com.hackbulgaria.programming51.week8;
+
+import org.omg.PortableServer.ForwardRequestHelper;
+
+public abstract class Test {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double startSum = 800000;
+		double interest = 1.07;
+		double take = 0.03;
+		
+		for (int i = 0; i < 25; i++) {
+			startSum *= interest;
+			
+		}
+	}
+
+}

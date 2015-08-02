@@ -1,0 +1,6 @@
+package com.hackbulgaria.programming51.week7;
+
+public class FunctionComposition {
+	
+	public int evaluate(int x);
+}

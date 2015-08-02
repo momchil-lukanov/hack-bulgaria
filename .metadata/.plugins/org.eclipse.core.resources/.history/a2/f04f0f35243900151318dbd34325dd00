@@ -1,0 +1,26 @@
+package com.hackbulgaria.programming51.week7;
+
+public class Function {
+	private String fName;
+	private String argumentName;
+	private String source;
+	
+	public Function(String source){
+		this.source = source;
+		
+		String[] FParts = source.split(" = ")
+	}
+	
+	public String getName() {
+		return fName;
+	}
+
+	public String getArgumentName() {
+		return argumentName;
+	}
+	
+	public int evaluate(int x){
+		return x;
+	}
+
+}

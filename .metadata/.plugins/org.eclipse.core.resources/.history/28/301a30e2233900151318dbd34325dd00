@@ -1,0 +1,23 @@
+package com.hackbulgaria.programming51.week7;
+
+import java.util.ArrayList;
+
+public class FunctionComposition {
+	
+	private ArrayList<Function> functions = new ArrayList<>();
+	
+	public FunctionComposition(String composition){
+		
+		String[] functions = composition.split(" . ");
+		
+		for (String f: functions) {
+			this.functions.add(Context.allFunctions.get(f));
+		}
+		
+	}
+	
+	public int evaluate(int x){
+		return x;
+	}
+	
+}
