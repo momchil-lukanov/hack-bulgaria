@@ -1,0 +1,10 @@
+package com.hackbulgaria.programming51.week8;
+
+import com.hackbulgaria.programming51.week6.Player;
+
+public class PandaPlayerMoveDown implements PandaPlayerMovement {
+
+	public PandaPlayer move() {
+		return new PandaPlayer(0,1);
+	}
+}

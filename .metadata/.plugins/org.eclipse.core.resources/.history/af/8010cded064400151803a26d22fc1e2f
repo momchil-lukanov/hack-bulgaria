@@ -1,0 +1,37 @@
+package com.hackbulgaria.programming51.week8;
+
+import java.util.Scanner;
+
+public class Lakes {
+	
+	int downs = 0;
+	int counterDowns = 0;
+	int horizontals = 0;
+	int counterHorizontals = 0;
+	int ups = 0;
+	int counterUps = 0;
+	int size;
+	
+	public Lakes(){		
+	}
+
+	public static void main(String[] args) {
+		Lakes lakes = new Lakes();
+		Scanner scanner = new Scanner(System.in);
+		String input = scanner.next();
+		
+		for (int i = 0; i < input.length() + 1; i++) {
+			Character down = 'd';
+			Character up = 'u';
+			Character horizontal = 'h';
+			if (input.substring(i, i+1).equals(down)) {
+				
+			} else if (input.substring(i, i+1).equals(horizontal)) {
+				
+			} else if (input.substring(i, i+1).equals(up)) {
+				
+			}
+		}
+	}
+
+}

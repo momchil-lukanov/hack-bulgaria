@@ -1,6 +1,0 @@
-package com.hackbulgaria.programming51.week7;
-
-public class Function {
-	private String Fname;
-	private String argumentName;
-}
