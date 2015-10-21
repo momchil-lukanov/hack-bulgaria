@@ -1,0 +1,17 @@
+package application;
+
+public class points {
+	
+	public static String position(String signs) {
+		
+		
+		
+		return signs;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

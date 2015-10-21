@@ -1,0 +1,35 @@
+package application;
+
+public class points {
+	
+	public static int x = 0;
+	public static int y = 0;
+	
+	public String position(String signs) {
+		
+		String result = "";
+		
+		for (int i = 0; i < signs.length(); i++) {
+			Character random = signs.charAt(i);
+			if (random.equals('>')) {
+				x++;
+			} else if (random.equals('<')) {
+				x--;
+			} else if (random.equals('^')) {
+				y++;
+			} else if (random.equals('v')) {
+				y--;			
+			}
+		}
+		
+		result = "(" + x + ")" + ", " + "(" + y + ")";
+		
+		return result;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
