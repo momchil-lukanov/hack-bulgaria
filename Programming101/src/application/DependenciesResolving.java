@@ -12,16 +12,21 @@ public class DependenciesResolving {
 	private static ArrayList<String> INSTALLED_MODULES = new ArrayList<>(Arrays.asList("lodash"));
 	private static JSONObject localDependenciesJson = null;
 	private static JSONObject allDependenciesJson = null;
+	
+	
+	private static String allDependenciesJsonString = "{" + "\"backbone\": [\"jQuery\", \"underscore\"],"
+			+ "\"jQuery\": [\"queryJ\"]," + "\"underscore\": [\"lodash\"]," + "\"queryJ\": []," + "\"lodash\": []"
+			+ "}";
 
-	public static void main(String[] args) {
-		String allDependenciesJsonString = "{" + "\"backbone\": [\"jQuery\", \"underscore\"],"
-				+ "\"jQuery\": [\"queryJ\"]," + "\"underscore\": [\"lodash\"]," + "\"queryJ\": []," + "\"lodash\": []"
-				+ "}";
-
-		String localDependenciesJsonString = "{" + "\"projectName\": \"Test0000\"," + "\"dependencies\": [\"backbone\"]"
-				+ "}";
-
+	private static String localDependenciesJsonString = "{" + "\"projectName\": \"Test0000\"," + "\"dependencies\": [\"backbone\"]"
+			+ "}";
+	
+	
+	public static void main(String[] args) {		
 		try {
+			/*
+			 * Building json objects from string
+			 */
 			localDependenciesJson = new JSONObject(localDependenciesJsonString);
 			allDependenciesJson = new JSONObject(allDependenciesJsonString);
 		} catch (JSONException e) {
@@ -30,14 +35,14 @@ public class DependenciesResolving {
 
 		try {
 			JSONArray dependencies = localDependenciesJson.getJSONArray(DEPENDENCIES);
-
-			installModules(dependencies);
-			System.out.println("All done");
+			installModules(dependencies);			
 
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} finally {
+			System.out.println("All done");
+		}	
 	}
 
 	private static void installModules(JSONArray modules) throws JSONException {
