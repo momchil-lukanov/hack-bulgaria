@@ -1,0 +1,18 @@
+package week1;
+
+public class tasks {
+	
+	public static boolean isOdd(int n) {
+		if (n % 2 != 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.hackbulgaria.programming51.week7;
+
+import java.util.LinkedList;
+
+public class Stack<T> implements List<T> {
+	
+	private LinkedList<T> l;
+
+	public void push(Object data) {
+		l.addFirst(data);
+	}
+
+	public void pop() {
+		
+	}
+
+	public int size() {
+
+		return 0;
+	}
+
+	public Object peek() {
+
+		return null;
+	}
+
+	public boolean empty() {
+
+		return false;
+	}
+	
+}

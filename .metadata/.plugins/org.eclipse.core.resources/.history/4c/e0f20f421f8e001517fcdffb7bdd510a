@@ -1,0 +1,17 @@
+package week1;
+
+import java.lang.reflect.Array;
+import java.util.Vector;
+
+public class taskForReward {
+	
+	public static int proizvedenieBezI(int[] a) {
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
